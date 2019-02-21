@@ -1,0 +1,96 @@
+<script>
+for(var i = 0; i < 5; i++) {
+        //var num = i;
+        setTimeout(function() {
+            console.log("The index of this number is: " + i);
+        }, i*1000);
+    };
+	
+	// 5 times 5
+	
+//=============================Solution of above question ==========================================	
+
+for(var i = 0; i < 5; i++) {
+    (function(i) {
+        //var num = i;
+        setTimeout(function() {
+            console.log("The index of this number is: " + i);
+        }, i*1000);
+    })(i);
+}
+
+for(var i=0;i<5;i++){
+	(function(){
+		var value=i;
+		setTimeout(function(){
+			console.log(value);
+		}, i*1000);
+	})();
+}
+
+for (var i = 0; i < 5; i++) {
+    (function () {
+        setTimeout(function () {
+            console.log(i)
+        }, i*1000);
+    })();
+}
+
+// ==============================remove Duplicates======================
+
+arr=[1,2,2,4,3,4];
+const data=[...(new Set(arr))];
+console.log(data);
+
+const arr = [7, 3, 1, 3, 3, 7];
+
+// Dedupe using a Set, which is then spread into a new Array
+const deduped = [...new Set(arr)];
+
+const num = [5, 2, 3, 4, 9, 3, 5];
+const unique_numbers = Array.from(new Set(num));
+
+console.log(num);
+console.log(unique_numbers);
+
+
+// =====================Hoisting ===============
+
+var myName33;
+console.log(myName33);
+myName33 = 'Sunil'; //output Sunil
+
+
+function hey() {
+console.log('hey ' + name);
+};
+var name;
+hey();
+name = 'Sunil';
+
+//======================= Spread Method ============
+
+function f (x, y, ...a) {
+    console.log (a.length);
+}
+f(1, 2, "hello", true, 7);	
+
+
+// =================================================
+
+console.log(false==='0'); //false
+console.log(false=='0'); // true
+
+// ===================== Destructuring ================
+[a,b,c]=[10,25]
+
+// ============== Constructor Function =================
+
+var Obj= function(name){ 
+	this.name=name;
+}; 
+var c=new Obj("Hello World"); 
+c.name
+
+	
+</script>

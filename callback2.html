@@ -1,0 +1,29 @@
+<script>
+function doHomework(subject, callback) {
+  //alert(`Starting my ${subject} homework.`);
+  callback(subject);
+}
+
+function finishNotification(callBackData){
+    //alert(callBackData+' Work Finished');
+}
+doHomework('Math', finishNotification);
+
+function genericPoemMaker(name, gender) {
+    console.log(name + " is finer than fine wine.");
+    console.log("Altruistic and noble for the modern time.");
+    console.log("Always admirably adorned with the latest style.");
+    console.log("A " + gender + " of unfortunate tragedies who still manages a perpetual smile");
+}
+
+function getUserInput(firstName, lastName, gender, callback) {
+    var fullName = firstName + " " + lastName;
+
+    // Make sure the callback is a function
+    if (typeof callback === "function") {
+    // Execute the callback function and pass the parameters to it
+    callback(fullName, gender);
+    }
+}
+getUserInput("Pradeep", "Kumar", "Man", genericPoemMaker);
+</script>

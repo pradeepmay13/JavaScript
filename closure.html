@@ -1,0 +1,26 @@
+<script>
+var addTo=function (passed) {
+
+   var add=function(inner) {
+        
+        return inner+passed;
+    };
+	
+   return add;
+   };
+   var add3=new addTo(3);   
+   var add4=new addTo(4);
+   
+   console.log(add3(1));;   
+   console.log(add4);
+   
+   
+   var test =function(){
+	var b=10;
+	var innerFunc=function(){
+		var sum=10+b;
+	}
+	return innerFunc;
+   }
+
+</script>
